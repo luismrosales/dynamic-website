@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --mainBg: #17181a;
 }
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #17181a;
+  background: var(--mainBg);
+  overflow-x: hidden;
 }
 
 #logo {
@@ -53,12 +55,13 @@ body {
   padding-left: 5rem;
   position: relative;
 }
-.hero-image {
+.hero-img {
   position: relative;
   flex: 1;
   flex-basis: 25rem;
+  overflow: hidden;
 }
-.hero-image img {
+.hero-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -132,11 +135,11 @@ body {
 .reveal-image,
 .reveal-text {
   position: absolute;
+  height: 150%;
   width: 100%;
-  height: 100%;
-  background: #17181a;
+  background: var(--mainBg);
   left: 0;
-  top: 0;
+  top: -15%;
 }
 
 .cursor {
@@ -145,4 +148,7 @@ body {
   border: 2px white solid;
   border-radius: 50%;
   position: absolute;
+}
+.scrollmagic-pin-spacer {
+  position: static !important;
 }
